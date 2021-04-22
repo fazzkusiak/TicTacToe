@@ -3,7 +3,9 @@
 tictactoe
 
 
-v1.1 	- fixed bug when three values are null and game ends 
+v1.1 	
+
+	- fixed bug when three values are null and game ends 
 	- now gives information who won
 	- application shuts down when winner is annouced
 
