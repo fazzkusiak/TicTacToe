@@ -17,7 +17,7 @@ namespace TicTacToe
             static char player1 = 'O';
             static char player2 = 'X';
             public static char move = 'O';
-            public static char[,] playground = new char[3, 3];
+            public static int[,] playground = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
             public static bool isGame = true;
             public static int counter = 0;
 
@@ -26,9 +26,19 @@ namespace TicTacToe
         public Form1()
         {
             InitializeComponent();
+        }
 
-
-
+        private void fillArray() 
+        {
+            var counter = 'a';
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    Attr.playground[i, j] = counter;
+                    counter++;
+                }
+            }
 
         }
         private char switchPlayer(char move)
@@ -74,7 +84,35 @@ namespace TicTacToe
 
         private void giveMessage()
         {
-            System.Windows.Forms.MessageBox.Show("koneic gry");
+            var winner = "";
+
+            if (Attr.move == 'X')
+            {
+                winner = "player 1";
+
+            }
+            else if (Attr.move == 'O')
+            {
+                winner = "player 2";
+            }
+            System.Windows.Forms.MessageBox.Show("game over, " + winner + " won the game");
+            System.Windows.Forms.Application.Exit();
+        }
+
+
+        void Button_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btn_MouseEnter(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                btn.UseVisualStyleBackColor = false;
+                btn.BackColor = Color.Black;
+                btn.ForeColor = Color.White;
+            }
         }
 
 
@@ -83,11 +121,8 @@ namespace TicTacToe
             Attr.counter++;
             Attr.playground[0, 0] = Attr.move;
             button1.Text = Convert.ToString(switchPlayer(Attr.move));
-            if (Attr.counter >= 5) checkPlayground();
-            if (!Attr.isGame)
-            {
-                giveMessage();
-            }
+           
+           
 
 
         }
@@ -106,6 +141,7 @@ namespace TicTacToe
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
             Attr.counter++;
             Attr.playground[0, 2] = Attr.move;
             button3.Text = Convert.ToString(switchPlayer(Attr.move));
