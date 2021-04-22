@@ -10,6 +10,7 @@ v1.1
 	- application shuts down when winner is annouced
 
 TODO:
+	
 	- fields should be unchangable
 	- shorten code, assign function to every button in one place
 	- ...
