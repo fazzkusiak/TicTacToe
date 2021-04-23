@@ -11,6 +11,17 @@ v1.1
 
 TODO:
 	
-	- fields should be unchangable
-	- shorten code, assign function to every button in one place
+	~~- fields should be unchangable~~
+	~~- shorten code, assign function to every button in one place~~
 	- ...
+
+
+v.1.2
+	
+	- fields are not unchangable
+	- every button is assigned to one function
+	
+TODO:
+		
+	- sometimes game doesn't ends when should
+	- information when game is over and noone won
