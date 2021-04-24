@@ -11,8 +11,8 @@ v1.1
 
 TODO:
 	
-	~~- fields should be unchangable~~
-	~~- shorten code, assign function to every button in one place~~
+	~~ - fields should be unchangable~~
+	~~ - shorten code, assign function to every button in one place~~
 	- ...
 
 
