@@ -105,20 +105,18 @@ namespace TicTacToe
 
             if (btn != null)
             {
-
-               
                 Attr.counter++;
                 btn.Text = Convert.ToString(switchPlayer(Attr.move));
 
-                //if (Attr.counter >= 5)
-                checkPlayground();
-                if (!Attr.isGame)
-                {
-                    giveMessage();
-                }
+                if (Attr.counter >= 5) checkPlayground();
+                if (!Attr.isGame) giveMessage();
+                
                 btn.UseVisualStyleBackColor = false;
                 btn.BackColor = Color.Transparent;
                 btn.Enabled = false;
+                
+
+
                 if (Attr.counter == 9)
                 {
                     System.Windows.Forms.MessageBox.Show("game over, noone won");
@@ -126,94 +124,67 @@ namespace TicTacToe
                 }
             }
         }
+   
 
 
         private void button1_Click(object sender, EventArgs e)
         {
             Attr.playground[0, 0] = Attr.move;
             btn_MouseClick (sender, e);
-
-          
-
-
-
-
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Attr.playground[0, 1] = Attr.move;
             btn_MouseClick(sender, e);
-          
-          
-            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Attr.playground[0, 2] = Attr.move;
             btn_MouseClick(sender, e);
-            
-          
-
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Attr.playground[1, 0] = Attr.move;
             btn_MouseClick(sender, e);
-            
-          
-
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             Attr.playground[1, 1] = Attr.move;
             btn_MouseClick(sender, e);
-           
-           
-
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             Attr.playground[1, 2] = Attr.move;
-            btn_MouseClick(sender, e);
-          
-           
+            btn_MouseClick(sender, e);        
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             Attr.playground[2, 0] = Attr.move;
             btn_MouseClick(sender, e);
-          
-           
-
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             Attr.playground[2, 1] = Attr.move;
             btn_MouseClick(sender, e);
-          
-          
-
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             Attr.playground[2, 2] = Attr.move;
-            btn_MouseClick(sender, e);
-          
-           
+            btn_MouseClick(sender, e);          
         }
 
- 
-
-       
-    }
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+}
 }
      
