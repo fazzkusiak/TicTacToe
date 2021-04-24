@@ -23,5 +23,17 @@ v.1.2
 	
 TODO:
 		
-	- sometimes game doesn't ends when should
-	- information when game is over and noone won
+	~~ - sometimes game doesn't ends when should ~~
+	~~ - information when game is over and noone won ~~
+
+v.1.3
+
+	- game now always ends when conditions are met
+	- now informs when game is over
+	- some graphics improvements like smaller window, larger buttons
+	- gives information whose turn is now
+
+TODO:
+	
+	~~ - smaller window ~~
+	~~ - information whose turn is now ~~
